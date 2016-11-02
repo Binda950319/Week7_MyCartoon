@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wbh.week7_mycartoon.homepage.RankFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#5c5959">
+
+        <TextView
+            android:id="@+id/text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/more_actionBar_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:src="@mipmap/actionbar_back" />
+    </RelativeLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <com.wbh.week7_mycartoon.utils.RefreshLayout
+        android:id="@+id/more_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/more_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></ListView>
+    </com.wbh.week7_mycartoon.utils.RefreshLayout>
+
+</LinearLayout>

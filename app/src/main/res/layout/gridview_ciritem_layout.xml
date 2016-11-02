@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <com.wbh.week7_mycartoon.utils.CircleImageView
+        android:id="@+id/cirgridImage_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_empty" ></com.wbh.week7_mycartoon.utils.CircleImageView>
+
+    <TextView
+        android:id="@+id/cirgrid_carName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="6"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"
+        android:text="cartoonname" />
+</LinearLayout>

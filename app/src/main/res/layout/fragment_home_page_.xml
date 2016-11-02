@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".mainfragment.HomePageFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#5c5959">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="首页"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/home_group"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/home_layout"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/boutique_rb"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="精品"
+                android:textColor="#54FF9F"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:background="@color/colorGray"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rank_rb"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="排行"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/home_group"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/home_group"
+        android:background="@color/colorBlue" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view2"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+</RelativeLayout>

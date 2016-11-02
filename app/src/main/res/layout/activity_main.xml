@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wbh.week7_mycartoon.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b8b6b6" />
+
+    <RadioGroup
+        android:id="@+id/bootom_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/homePage_rb"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/homepage_bg"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/search_rb"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/search_bg"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/consult_rb"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/consult_bg"
+            android:gravity="center"
+            android:text="资讯"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/manage_rb"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/manager_bg"
+            android:gravity="center"
+            android:text="管理"
+            android:textSize="15sp" />
+    </RadioGroup>
+</LinearLayout>

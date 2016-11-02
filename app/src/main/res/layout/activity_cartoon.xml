@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wbh.week7_mycartoon.homepage.CartoonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#5c5959"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/actionBar_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/actionbar_back" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="漫画简介"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="170dp"
+                android:src="@mipmap/icon_comic_share" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cartoon_icon_iv"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_empty" />
+
+            <TextView
+                android:id="@+id/cartoon_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/cartoon_author_tv"
+                android:layout_alignStart="@+id/cartoon_author_tv"
+                android:layout_alignTop="@+id/cartoon_icon_iv"
+                android:layout_marginTop="24dp"
+                android:text="伪恋"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/cartoon_author_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartoon_name_tv"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/cartoon_icon_iv"
+                android:layout_toRightOf="@+id/cartoon_icon_iv"
+                android:onClick="onClick"
+                android:text="作者" />
+
+            <TextView
+                android:id="@+id/cartoon_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartoon_author_tv"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/cartoon_icon_iv"
+                android:layout_toRightOf="@+id/cartoon_icon_iv"
+                android:text="状态"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#d5d5d5" />
+
+            <TextView
+                android:id="@+id/cartoon_reading_bt"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/cartoon_state_tv"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/cartoon_icon_iv"
+                android:layout_toRightOf="@+id/cartoon_icon_iv"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="开始阅读" />
+
+            <TextView
+                android:id="@+id/cartoon_collect_bt"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/cartoon_reading_bt"
+                android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_toEndOf="@+id/cartoon_reading_bt"
+                android:layout_toRightOf="@+id/cartoon_reading_bt"
+                android:background="@color/colorBlue"
+                android:enabled="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="添加收藏" />
+
+            <TextView
+                android:id="@+id/cartoon_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/cartoon_icon_iv"
+                android:layout_below="@id/cartoon_icon_iv"
+                android:layout_marginRight="10dp"
+                android:text="内容简介"
+                android:textColor="#706f6f"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/cartoon_intro_tv"
+                android:layout_below="@id/cartoon_intro_tv"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:onClick="onClick"
+                android:src="@mipmap/icon_comic_detail_disvisible" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/viewline1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#9a9898" />
+
+            <TextView
+                android:id="@+id/directory_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewline1"
+                android:layout_margin="10dp"
+                android:text="目录"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/directory_tv"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/directory_tv"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="onClick"
+                android:src="@mipmap/icon_comic_rank" />
+
+            <TextView
+                android:id="@+id/viewline2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/directory_tv"
+                android:background="#9a9898" />
+        </RelativeLayout>
+
+        <com.wbh.week7_mycartoon.utils.MyListView
+            android:layout_width="match_parent"
+            android:id="@+id/cartoon_listView"
+            android:layout_height="match_parent"></com.wbh.week7_mycartoon.utils.MyListView>
+    </LinearLayout>
+</ScrollView>
